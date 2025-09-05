@@ -109,7 +109,33 @@ function trianguloDeAsteriscos() {
         const linea = espacios + estrellas + espacios;
         salida += linea + '\n';
     }
-
-    console.log(salida);
     mostrarResultado(salida);
+}
+
+function nombresConA() {
+    const nombres = prompt("¿Cuáles son los nombres? (separalos por comas y sin espacios).");
+    let nombresSeparados = nombres.split(",");
+    let nombresFinal = identificarLetraA(nombresSeparados);
+    mostrarResultado(nombresFinal);
+    console.log(nombresFinal);
+}
+
+function reemplazarString()
+{
+    let texto = prompt("Escribí una cadena de texto.")
+    const palabraAReemplazar = prompt("Ahora escribí la palabra que quieras reemplazar")
+    const palabraReemplazo = prompt("¿Con qué palabra deseas reemplazarla?")
+    const nuevoTexto = cadenaNueva(texto, palabraAReemplazar, palabraReemplazo);
+    mostrarResultado(nuevoTexto);
+    console.log(nuevoTexto);
+}
+
+function cortarString()
+{
+    let texto = prompt("Escribí una cadena de texto.")
+    const numero = prompt("Ahora escribí la cantidad de caracteres que vas a mantener")
+    let nuevoTexto = ""
+    nuevoTexto = texto.slice(0, numero);
+    mostrarResultado(nuevoTexto);
+    console.log(nuevoTexto);
 }

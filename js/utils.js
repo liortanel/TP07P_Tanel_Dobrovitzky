@@ -15,3 +15,29 @@ function mostrarResultado(mensaje) {
     div.innerText = mensaje;
 }
 
+function identificarLetraA(nombresSeparados)
+{
+    let nombresConA = [];
+    for(let i = 0; i < nombresSeparados.length; i++)
+    {
+        if(nombresSeparados[i].startsWith("A") || nombresSeparados[i].startsWith("a"))
+        {
+            nombresConA.push(nombresSeparados[i]);
+        }
+    }
+    return nombresConA;
+}
+
+function cadenaNueva(texto, palabraAReemplazar, palabraReemplazo)
+{   
+    let nuevoTexto;
+    if(texto.includes(palabraAReemplazar))
+    {
+        nuevoTexto = texto.replace(palabraAReemplazar, palabraReemplazo); 
+    }
+    else{
+        nuevoTexto = "La palabra a reemplazar no existe";
+    }
+    return nuevoTexto;
+}
+
